@@ -28,6 +28,8 @@ public class InputManager : MonoBehaviour
     private List<InputData> inputList = new List<InputData> { };
     private Timer inputTimer = new Timer(0.05f);
 
+    public BallManager ballMangaer;
+
     public Direction temp;
 
     private void Start()
@@ -62,7 +64,7 @@ public class InputManager : MonoBehaviour
     private void DirectionCheck(int index)
     {
         temp = (Direction)index;
-        if (temp != 0) Debug.Log(temp);
+        ballMangaer.HitBall(temp);
     }
 
     private void InputCheck()

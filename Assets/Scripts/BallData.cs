@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class BallData
 {
-    private Direction direction = Direction.None;
-    private float arriveTime = 0;
-    private float nowTime = 0;
+    public Direction direction = Direction.None;
+    public float arriveTime = 0;
 
-    public BallData(Direction direction ,float arriveTime, float nowTime)
+    public BallData(Direction direction ,float arriveTime)
     {
         this.direction = direction;
         this.arriveTime = arriveTime;
-        this.nowTime = nowTime;
     }
 }
